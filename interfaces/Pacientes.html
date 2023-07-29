@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar Pacientes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Estilos.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Pacientes</h2>
+    <form action="{{ url_for('cons_pac') }}" method="POST">
+      <input type="text" placeholder="ID del paciente" required>
+      <label for="Fecha de nacimiento">Fecha de nacimiento</label>
+      <input type="date" placeholder="Fecha de nacimiento (dd/mm/yyyy)" required>
+      <input type="text" placeholder="Enfermedades cronicas">
+      <input type="text" placeholder="Alergias">
+      <input type="text" placeholder="Antecedentes familiares">
+      <input type="submit" value="Guardar">
+    </form>
+  </div>
+</body>
+</html>
